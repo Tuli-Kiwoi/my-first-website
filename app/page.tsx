@@ -72,9 +72,6 @@ export default function Home() {
               <Button asChild size="lg" className="text-lg px-8 py-3">
                 <Link href="/projects">View My Work</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3">
-                <Link href="/contact">Contact Me</Link>
-              </Button>
             </div>
 
             {/* Social Icons */}
@@ -100,6 +97,27 @@ export default function Home() {
               >
                 <IconBrandTwitter className="w-6 h-6" />
               </Link>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-2 text-sm text-muted-foreground">
+              <a
+                href="mailto:kiwoituli@gmail.com"
+                className="transition-colors hover:text-foreground"
+              >
+                kiwoituli@gmail.com
+              </a>
+              <span className="hidden sm:inline-block h-1 w-1 rounded-full bg-muted-foreground/60" />
+              <a
+                href="tel:+254797292238"
+                className="transition-colors hover:text-foreground"
+              >
+                +254 797292238
+              </a>
+              <span className="hidden sm:inline-block h-1 w-1 rounded-full bg-muted-foreground/60" />
+              <span className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-green-500" />
+                open
+              </span>
             </div>
           </motion.div>
 

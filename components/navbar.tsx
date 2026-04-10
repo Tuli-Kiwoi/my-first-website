@@ -15,11 +15,6 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ]
 
-const contactInfo = {
-  phone: "+254 797292238",
-  email: "kiwoituli@gmail.com",
-}
-
 export function Navbar() {
   const { theme, setTheme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
@@ -34,21 +29,6 @@ export function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <a
-              href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-              className="hover:text-foreground transition-colors"
-            >
-              {contactInfo.phone}
-            </a>
-            <a
-              href={`mailto:${contactInfo.email}`}
-              className="hover:text-foreground transition-colors"
-            >
-              {contactInfo.email}
-            </a>
-          </div>
-
           {/* Theme Toggle */}
           <Button
             variant="ghost"
@@ -94,21 +74,6 @@ export function Navbar() {
                     {link.name}
                   </Link>
                 ))}
-
-                <div className="pt-4 border-t border-border/40 space-y-2 text-sm text-muted-foreground">
-                  <a
-                    href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-                    className="block hover:text-foreground transition-colors"
-                  >
-                    {contactInfo.phone}
-                  </a>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className="block hover:text-foreground transition-colors"
-                  >
-                    {contactInfo.email}
-                  </a>
-                </div>
               </div>
             </SheetContent>
           </Sheet>
